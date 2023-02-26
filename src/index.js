@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-
+import {App , styles} from "./container/App/App";
 const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
+console.log(styles);
 root.render(
-  <React.StrictMode>
+  <div>
+    <h1>Translate App</h1>
     <App />
-  </React.StrictMode>
+  </div>
 );
