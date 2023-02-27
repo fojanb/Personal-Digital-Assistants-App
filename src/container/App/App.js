@@ -1,44 +1,27 @@
 import React from "react";
-const styles = {
-  input: {
-    fontWeight: "bold",
-    backgroundColor: "yellow",
-    width: "auto",
-    border: "none",
+import Template from "../../components/Template/Template";
+const data = [
+  {
+    name: "Cortana",
+    company: "Microsoft",
   },
-  wrapper: {
-    display: "flex",
-    flexDirection: "column",
+  {
+    name: "Alexa",
+    company: "Amazon",
   },
-  textarea: {
-    width: "50%",
-    margin: "10px 0",
-    textAlign: "left",
+  {
+    name: "Siri",
+    company: "Apple",
   },
-};
+];
+
 const App = () => {
-  const inputTools = {
-    type: "text",
-    placeholder: "i.e. 12",
-    min: 5,
-    max: 10,
-    id: "myTranslate",
-  };
+  let pdas = data.map((pda,index) => <Template name={pda.name} company={pda.company} key={index}/>);
   return (
-    <div id="wrapper" style={styles.wrapper}>
-      <h3>Please enter your word or sentence down below</h3>
-      <input
-        type={inputTools.type}
-        placeholder={inputTools.placeholder}
-        min={inputTools.min}
-        max={inputTools.max}
-        style={styles.input}
-        id={inputTools.id}
-        spellCheck
-      />
-      <textarea placeholder="Type here..." style={styles.textarea} autoFocus />
+    <div>
+      <h2 style={{color:"#bf7b7b"}}>Personal Digital Assistants</h2>
+      {pdas}
     </div>
   );
 };
-
-export {App,styles};
+export default App;
