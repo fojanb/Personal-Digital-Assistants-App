@@ -1,29 +1,6 @@
 import React from "react";
 import Template from "../../components/Template/Template";
-import alexa from "../../assets/alexa.png";
-import cortana from "../../assets/cortana.png";
-import siri from "../../assets/siri.png";
-
-const data = [
-  {
-    name: "Cortana",
-    company: "Microsoft",
-    imageSrc: { cortana },
-    alt: "Cortana Logo",
-  },
-  {
-    name: "Alexa",
-    company: "Amazon",
-    imageSrc: { alexa },
-    alt: "Alexa Logo",
-  },
-  {
-    name: "Siri",
-    company: "Apple",
-    imageSrc: { siri },
-    alt: "Siri Logo",
-  },
-];
+import { data } from "../../components/Data/Data";
 
 const App = () => {
   let pdas = data.map((pda, index) => (
@@ -35,9 +12,12 @@ const App = () => {
       alt={pda.alt}
     />
   ));
+  // let arr =[<div>first</div>,<div>second</div>,<div>third</div>];
   return (
     <div>
-      <h1 style={{ color: "#5b3f30",fontWeight:"bold" }}>Personal Digital Assistants</h1>
+      <h1 style={{ color: "#5b3f30", fontWeight: "bold" }}>
+        Personal Digital Assistants
+      </h1>
       <div className="cardsWrapper">{pdas}</div>
     </div>
   );

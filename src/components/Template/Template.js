@@ -6,7 +6,7 @@ const Template = ({ name, company, imageSrc, alt }) => {
           <img
             src={imageSrc}
             alt={alt}
-            style={{width:"25px",height:"25px"}}
+            style={{width:"150px",height:"150px"}}
           />
         </figure>
       </div>
