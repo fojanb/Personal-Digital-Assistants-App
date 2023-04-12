@@ -1,22 +1,21 @@
-const Template = ({ name, company, imageSrc, alt }) => {
+const Template = ({ name, company, imageSrc, alt, description }) => {
   return (
     <div className="card">
       <div className="card-image">
-        <figure className="image is-4by3">
+        <figure className="image is-3">
           <img
             src={imageSrc}
             alt={alt}
-            style={{width:"150px",height:"150px"}}
+            style={{ width: "150px", height: "150px" }}
           />
         </figure>
       </div>
       <div className="card-content">
-        <div className="media">
-          <div className="media-content">
-            <p className="title is-4">{name}</p>
-            <p className="subtitle is-6">{company}</p>
-          </div>
-        </div>
+          <p className="title is-4">{name}</p>
+          <p className="subtitle is-6">{company}</p>
+      </div>
+      <div className="card-content">
+          <p className="subtitle is-6" id="description">{description}</p>
       </div>
     </div>
   );

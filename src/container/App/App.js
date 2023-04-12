@@ -1,6 +1,7 @@
 import React from "react";
 import Template from "../../components/Template/Template";
 import { data } from "../../components/Data/Data";
+import "bulma/css/bulma.css";
 
 const App = () => {
   let pdas = data.map((pda, index) => (
@@ -10,14 +11,16 @@ const App = () => {
       imageSrc={pda.imageSrc}
       key={index}
       alt={pda.alt}
+      description={pda.description}
     />
   ));
-  // let arr =[<div>first</div>,<div>second</div>,<div>third</div>];
   return (
     <div>
-      <h1 style={{ color: "#5b3f30", fontWeight: "bold" }}>
-        Personal Digital Assistants
-      </h1>
+      <section class="hero is-info">
+        <div class="hero-body">
+          <p class="title">Personal Digital Assistants</p>
+        </div>
+      </section>
       <div className="cardsWrapper">{pdas}</div>
     </div>
   );

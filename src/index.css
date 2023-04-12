@@ -10,9 +10,12 @@ html{
     background-color: #b98b73;
 }
 .card {
-  width: 15%;
-  height: 25%;
+  width: 30%;
+  height: auto;
   background-color: antiquewhite;
+}
+#description{
+  text-align: justify;
 }
 .cardsWrapper {
   display: flex;
