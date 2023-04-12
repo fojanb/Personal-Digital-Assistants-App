@@ -11,7 +11,7 @@ html{
 }
 .card {
   width: 30%;
-  height: auto;
+  height: 700px;
   background-color: antiquewhite;
 }
 #description{
